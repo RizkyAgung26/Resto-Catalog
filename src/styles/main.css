@@ -1,0 +1,443 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+button:focus {
+  outline: 4px dashed rgb(255, 251, 0);
+}
+.app-bar {
+  background-color: #dbe2ef;
+  color: brown;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Londrina Solid', cursive;
+}
+
+.app-bar .app-bar__menu button {
+  display: none;
+}
+.app-logo {
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.app-logo:focus {
+  outline: 4px dashed rgb(255, 251, 0);
+}
+
+.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-item a {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 5px 0px;
+  font-family: 'Londrina Solid', cursive;
+  text-decoration: none;
+  color: gray;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+.nav-item a:focus {
+  outline: 4px dashed rgb(255, 251, 0);
+}
+.nav-item a:hover {
+  color: brown;
+  font-weight: bold;
+}
+
+.hero {
+  padding: 6rem 7%;
+  width: 100%;
+  min-height: 380px;
+  display: block;
+  align-items: center;
+  text-align: center;
+  background-image: url('../public/images/heros/hero-image_4-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  font-family: 'Londrina Solid', cursive;
+}
+.hero h1 {
+  font-size: 5em;
+  text-shadow: 1px 1px 3px;
+  color: #dbe2ef;
+  font-family: 'Londrina Solid', cursive;
+}
+
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  padding: 8px;
+  background-color: #dbe2ef;
+  color: brown;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+  outline: 4px dashed rgb(255, 251, 0);
+}
+
+footer {
+  background-color: #dbe2ef;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+footer p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: brown;
+  text-align: center;
+}
+
+.content {
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+#query {
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+  border: 3px solid brown;
+  background-color: #dbe2ef;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.content__heading {
+  font-size: 1.5em;
+  color: brown;
+  padding: 15px;
+  background-color: #dbe2ef;
+  box-shadow: 0 4px 8px 0 brown;
+  font-family: 'Londrina Solid', cursive;
+}
+
+.restaurants {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+.resto-item {
+  width: calc(100% - 20px);
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #dbe2ef;
+  box-shadow: 0 4px 8px 0 brown;
+  padding: 40px;
+}
+
+.resto-item:hover {
+  box-shadow: 10px 10px 5px 0 brown;
+}
+.resto__title {
+  font-family: 'Londrina Solid', cursive;
+  color: brown;
+  font-size: 1.5em;
+  margin: 5px 0;
+}
+.resto-item__content h3 {
+  margin: 0 0 10px 0;
+}
+.resto-item__content h3 a {
+  font-family: 'Londrina Solid', cursive;
+  color: brown;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 5px 0;
+  padding: 10px;
+}
+.resto-item__content h3 a:hover {
+  color: grey;
+}
+.resto-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  font-size: 0.8rem;
+  text-align: justify;
+  margin: 5px 0;
+}
+.resto-item__header {
+  position: relative;
+}
+.resto-item__header__poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.resto-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: brown;
+  color: #dbe2ef;
+  font-weight: bold;
+}
+.resto-item__header__rating__score {
+  margin-left: 10px;
+}
+.resto-item__content {
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+}
+.resto-item__not__found {
+  font-size: 1.5em;
+  color: brown;
+  padding: 75px;
+  font-family: 'Londrina Solid', cursive;
+}
+
+.detail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+
+.resto-detail {
+  width: calc(100% - 20px);
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #dbe2ef;
+  box-shadow: 0 4px 8px 0 brown;
+  padding: 40px;
+}
+
+.resto__name {
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+  color: #dbe2ef;
+  padding: 15px;
+  background-color: brown;
+  box-shadow: 0 4px 8px 0 brown;
+  font-family: 'Londrina Solid', cursive;
+}
+.resto__poster {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.resto__info h3 {
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+  color: #dbe2ef;
+  margin-top: 15px;
+  padding: 15px;
+  background-color: brown;
+  box-shadow: 0 4px 8px 0 brown;
+  font-family: 'Londrina Solid', cursive;
+}
+.resto__info h4 {
+  font-weight: bold;
+  padding: 0.5em 0;
+  display: block;
+  text-decoration: none;
+  background-color: #dbe2ef;
+  border: 0.5px solid brown;
+  border-width: 0 0 0.5px;
+}
+
+.detail-food {
+  width: calc(100% - 20px);
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #dbe2ef;
+  box-shadow: 0 4px 8px 0 brown;
+  overflow: hidden;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+}
+.detail-food h4 {
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+  color: #dbe2ef;
+  padding: 15px;
+  background-color: brown;
+  box-shadow: 0 0 8px 4px #dbe2ef;
+  font-family: 'Londrina Solid', cursive;
+}
+.detail-food li {
+  padding: 0.5em 0;
+  display: block;
+  text-decoration: none;
+  background-color: #dbe2ef;
+  border: 0.5px solid brown;
+  border-width: 0 0 0.5px;
+  font-family: 'Londrina Solid', cursive;
+}
+.detail-drink {
+  width: calc(100% - 20px);
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #dbe2ef;
+  box-shadow: 0 4px 8px 0 brown;
+  overflow: hidden;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+}
+.detail-drink h4 {
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+  color: #dbe2ef;
+  padding: 15px;
+  background-color: brown;
+  box-shadow: 0 0 8px 4px #dbe2ef;
+  font-family: 'Londrina Solid', cursive;
+}
+.detail-drink li {
+  padding: 0.5em 0;
+  display: block;
+  text-decoration: none;
+  background-color: #dbe2ef;
+  border: 0.5px solid brown;
+  border-width: 0 0 0.5px;
+  font-family: 'Londrina Solid', cursive;
+}
+
+.resto__description {
+  width: calc(100% - 20px);
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #dbe2ef;
+  box-shadow: 0 4px 8px 0 brown;
+  padding: 20px;
+}
+.resto__description h3 {
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+  color: #dbe2ef;
+  padding: 15px;
+  background-color: brown;
+  box-shadow: 0 0 8px 4px #dbe2ef;
+  font-family: 'Londrina Solid', cursive;
+}
+
+.resto__description p {
+  margin-top: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Londrina Solid', cursive;
+  text-align: justify;
+}
+.resto__review {
+  width: calc(100% - 20px);
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #dbe2ef;
+  box-shadow: 0 4px 8px 0 brown;
+  padding: 20px;
+}
+.resto__review h3 {
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+  color: #dbe2ef;
+  padding: 15px;
+  background-color: brown;
+  box-shadow: 0 0 8px 4px #dbe2ef;
+  font-family: 'Londrina Solid', cursive;
+}
+.detail-review-item {
+  color: black;
+  background-color: grey;
+  margin-bottom: 1.5em;
+}
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1em;
+  color: brown;
+  border-bottom: 1px solid black;
+}
+
+.review-name {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.review-date {
+  font-size: 0.8em;
+  font-weight: lighter;
+}
+
+.review-body {
+  padding: 0.8em;
+  text-align: left;
+  font-family: 'Londrina Solid', cursive;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
